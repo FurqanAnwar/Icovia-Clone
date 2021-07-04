@@ -1,0 +1,36 @@
+.Box{
+    font-size: 1.3rem;
+    font-weight: 500;
+    &__Row{
+        display: flex;
+       
+
+    }
+
+}
+
+.Radio{
+   
+    display: block;
+    width: 1.4rem;
+    height:1.4rem;
+    border:1px solid black;
+    border-radius: 1.4rem;
+    margin: 2px 4px 0 0;
+    position: relative;
+    background-image: linear-gradient(to top, #e5e5e5, $Color-White) ;
+    box-shadow: 0.02rem 0.05rem dimgrey ;
+}
+
+.Radio::after{
+    content: "";
+    display: block;
+    width: .4rem;
+    height: .4rem;
+    border-radius: .4rem;
+    background-color: black;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

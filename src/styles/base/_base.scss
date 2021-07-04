@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    background: $Color-Body;
+}
+
+.Content-Divider{
+    height: 100%;
+    background-color: $Color-Border;
+    width: 1rem;
+}
+
+input:focus{
+    border: 2px solid rgba(101, 171, 225, 0.7) ;
+    box-shadow:  0 0.0625rem 0.0625rem rgba(101, 171, 225, 0.7);
+    outline: 0;
+}
+
+button:hover,button:focus{
+    border: 1px solid rgba(101, 171, 225, 0.7) ;
+    outline:0;
+}
+
+::-webkit-scrollbar-corner{
+    border-right: 0.0625rem solid #808080;
+    border-bottom: 0.0625rem solid #808080;
+    border-bottom-right-radius: 0.5rem;
+    background-color: black;
+}
+
+// ::-webkit-scrollbar{
+//     border: 0.0625rem solid #808080;
+// }
+
+::-webkit-scrollbar-button{
+   border: 0.0625rem solid #808080
+}
+::-webkit-resizer{
+    background-color: $Color-White;
+}
+
+.diagram-component{
+    width: 400px;
+    height: 400px;
+    border: solid 1px black;
+    background-color: white;
+}
+
+.box {
+    position: absolute;
+    cursor: move;
+    color: black;
+    max-width: 215px;
+    border-radius: 5px;
+    padding: 1em;
+    margin: auto;
+    user-select: none;
+    transform: none;
+  }
+
+  [type=button]:not(:disabled),
+   [type=reset]:not(:disabled), 
+   [type=submit]:not(:disabled), 
+   button:not(:disabled){
+      cursor: pointer;
+  }
+
+  #container{
+    overflow: hidden;
+  }
+
+  .dragging{
+      position: absolute;
+      z-index: 999;
+  }

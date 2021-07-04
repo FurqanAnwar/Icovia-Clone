@@ -1,0 +1,19 @@
+@mixin mt($val) {
+    margin-top: $val;
+}
+
+@mixin mb($val) {
+    margin-top: $val;
+}
+@mixin mx($val) {
+    margin: 0 $val 0 $val;
+}
+
+@mixin py($val) {
+    padding: $val $val;
+}
+
+@mixin px($val) {
+    padding: 0 $val 0 $val;
+}
+

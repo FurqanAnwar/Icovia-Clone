@@ -1,0 +1,117 @@
+export default {
+    collection:[
+    {   name: 'Tables & Chairs',
+        items:[
+            'Pic-1',
+            'Pic-2',
+            'Pic-3',
+            'Pic-4',
+            'Pic-5',
+            'Pic-6',
+            'Pic-7',
+            'Pic-8',
+            'Pic-9',
+            'Pic-10',
+            'Pic-11',
+            'Pic-12',
+            'Pic-13',
+            'Pic-14',
+            'Pic-15',
+            'Pic-16',
+            'Pic-17',
+            'Pic-18',
+            'Pic-19',
+            'Pic-20',
+            'Pic-21',
+            'Pic-22',
+            'Pic-23',
+            'Pic-24',
+            'Pic-25',
+            'Pic-26',
+            'Pic-27',
+            'Pic-28',
+            'Pic-29',
+            'Pic-30',
+            'Pic-31',
+            'Pic-32',
+            'Pic-34',
+            'Pic-35',
+            'Pic-36',
+            'Pic-37',
+            'Pic-38',
+            'Pic-39',
+            'Pic-40',
+            'Pic-41',
+            'Pic-42',
+            'Pic-43',
+            'Pic-44',
+            'Pic-45'
+            
+            
+        ]
+        
+    },
+    {   name: 'Dance Floors & Stages',
+        items:[
+            'Pic-1',
+            'Pic-2',
+            'Pic-3',
+            'Pic-4',
+            'Pic-5',
+            'Pic-6',
+            'Pic-7',
+            'Pic-8',
+            'Pic-9',
+            'Pic-10',
+            'Pic-11'
+        ]
+    },
+    {
+        name: 'Bars, Buffets, Stations',
+        items:[
+            'Pic-1',
+            'Pic-2'
+    
+        ]
+    },{
+        name: 'Lounge Furniture',
+        items: [
+            'Pic-1',
+            'Pic-2',
+            'Pic-3',
+            'Pic-4',
+            'Pic-5',
+            'Pic-6',
+            'Pic-7',
+            'Pic-8',
+            'Pic-9',
+            'Pic-10',
+            'Pic-11',
+            'Pic-12',
+            'Pic-13',
+            'Pic-14',
+            'Pic-15',
+            'Pic-16',
+            'Pic-17',
+            'Pic-18',
+            'Pic-19',
+            'Pic-20',
+            'Pic-21',
+            'Pic-22',
+            'Pic-23',
+            'Pic-24',
+            'Pic-25',
+            'Pic-26',
+            'Pic-27',
+            'Pic-28',
+            'Pic-29',
+            'Pic-30',
+            'Pic-31',
+            'Pic-32',
+            'Pic-34',
+            'Pic-35',
+            'Pic-36',
+            'Pic-37'
+        ]
+    }
+]}

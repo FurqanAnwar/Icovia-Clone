@@ -1,0 +1,75 @@
+
+.Content{
+    flex-basis: 49.5%;
+    &-Container{
+
+        &-Pic{
+            
+        }
+        &__Head{
+            display:flex;
+            align-items: center;
+            margin: 0 -4rem;
+           
+
+        }
+
+        &__Body{
+            padding: 2.5rem 0 0 0;
+            
+        }
+
+        &__Tail{
+            .Preview-Container{
+                width: 32rem;
+                height: 21rem;
+                @include mt(2rem);
+                background-color: #fff;
+                box-shadow: 0.1875rem 0.3125rem 0.3125rem #c2c0b5;
+                border:0.0625rem solid #888888;
+                border-radius: 0.625rem;
+               
+                text-align: center;
+                overflow: hidden;
+
+                &__img{
+                    flex-basis: 33.33%;
+                    // background-color: red;
+                }
+                &__Content{
+                    display: grid;
+                    grid-template-rows: repeat(3,1fr);
+                    grid-template-columns: repeat(3,1fr);
+                    height:100%;
+                    padding: 1rem 0 0 1.5rem;
+
+                    
+                    &-row{
+                        display: flex;
+                        height: 7rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Step-1,.Step-2{
+    margin-right: 1.5rem;
+    opacity: .4;
+}
+
+.img-selected{
+    background-color: $Color-Background;
+    border: 2px solid $Color-Background;
+    padding: .4rem;
+}
+
+.Content__Btn{
+    display: flex;
+    position: relative;
+}
+
+.ComplexBtn-Container{
+    position: relative;
+}

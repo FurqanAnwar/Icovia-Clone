@@ -1,0 +1,53 @@
+.Main{
+    width: 90rem;
+    height: 50rem;
+    background-color: $Color-Main;
+    box-shadow: 0.1875rem 0.3125rem 0.3125rem #C2C0B5;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 1rem auto;
+    // position: relative;
+    padding: 4rem 0 0 3rem;
+    &__Heading{
+        font-size: 1.25rem;
+        font-weight: 500;
+
+
+        &-Primary{
+
+        }
+    }
+    &__Container{
+        display: flex;
+        height: 100%;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%,-50%);
+
+        &__Content-Left,
+        &__Content-Right{
+            flex-basis: 49.5%;
+            padding: 2rem 0 0 4rem;
+            
+        }
+
+        &__Content-Right{
+            padding: 2rem 0 0 4rem;
+        }
+
+        &__Content-Left{
+           
+        }
+
+        &__Content-Divider{
+            flex-basis: 1%;
+            border-left: 1.6px solid $Color-Border;
+            height: 70%;
+            position:relative;
+            top:15%;
+            padding-right: 2rem;
+        }
+    }
+
+}

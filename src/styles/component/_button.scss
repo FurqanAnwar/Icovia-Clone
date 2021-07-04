@@ -1,0 +1,161 @@
+.Btn{
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: .8rem;
+    display: flex;
+    border:0.0625rem solid $Color-Border;
+    overflow: hidden;
+    
+    & span{
+        font-size: 1.2rem;
+    }
+    &-Complex-Container{
+        position: relative;
+    }
+    &-Primary{
+        background-image:linear-gradient(to bottom,
+                                        rgba(101, 171, 225, 0.1),
+                                        rgba(101, 171, 225, 0.35),
+                                        rgba(101, 171, 225, 0.5)) ;
+        background-color: #fff;
+        border:0.225rem solid rgba(101, 171, 225, 1) ;
+        outline: 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+        width: 12rem;
+        height: 1rem;
+        box-sizing: content-box;
+        @include mt(2.5rem);
+        & > span{
+            flex-basis: 100%;
+            padding:0;
+        }
+
+        &:hover{
+            border-width: 0.0625rem ;
+            padding:1.13rem 1.13rem;
+            border: 1px solid rgba(101, 171, 225, 0.7) ;
+            outline:0;
+        }
+    }
+
+    &--Block{
+        display: block;
+        width:100%;
+        
+    }
+    // &--Page{
+    //     padding: 0 1rem;
+    // }
+    &-Pad{
+        padding: 1rem 1rem;
+    }
+    &-Slash{
+        height: 100%;
+        border-right: 2px solid $Color-Border ;
+    }
+    &-Compact{
+        width: 15rem  !important;
+        margin-left: 2rem;
+    }
+    &-DropDown{
+        display: block;
+        width:100%;
+        border:0;
+        background-color:#fff;
+    }
+    &-Collection{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 10rem;
+        width: 20rem;
+        overflow-y: scroll;
+
+        visibility:hidden ;
+        opacity: 0;
+
+        &--Overflow{
+            overflow-y: unset;
+        }
+        & button{
+            border-radius: 0;
+
+            &:hover{
+               background-color:  rgba(101, 171, 225, 0.3) ;
+            }
+        }
+        &--Small{
+            width: 15rem;
+            top: 100%;
+            
+        }
+
+       &--Overflow-y{
+           overflow-y:unset;
+       }
+
+        &--Pos{
+            left: 12%;
+        }
+     }
+    
+    &-Small{
+       
+        //  overflow: unset;
+         & > .Btn-Collection{
+             top:110%;
+             left:.1%;
+             width: 8.5rem;
+             height: 6rem;
+             overflow-y: unset;
+         }
+     }
+    &-Visible{
+        visibility: visible;
+        opacity: 1;
+    }
+    &-Stretch{
+        
+        width: 20rem;
+        & > .Btn__Title{
+            flex-basis: 90%;
+        }
+        & > .Btn__Arrow{
+            flex-basis: 10%;
+        }
+        &:active + .Btn-Collection{
+            display: block;
+        }
+    }
+    &__Title{
+       flex-basis: 70%;
+       display: flex;
+       margin: auto;
+       align-items: center;
+       justify-content: center;
+
+        
+
+        // &--Pad{
+        //     padding: 0 1rem;
+        // }
+        
+    }
+    
+
+    &__Arrow{
+        flex-basis: 30%;
+       padding: .3rem 0 0 0;
+       height: 75%;
+        &::before{
+            content:"\f0dd";
+            font-size: 1.6rem;
+           
+        }
+
+     
+    }
+   
+
+}

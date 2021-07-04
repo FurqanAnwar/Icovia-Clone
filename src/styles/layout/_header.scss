@@ -1,0 +1,43 @@
+.Header{
+display: flex;
+width:100%;
+
+    &__Container{
+        width: 60%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+    
+        &__Tab{
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+    }
+
+    .Links-Container{
+        margin-left: 3.5rem;
+        &_Link{
+ text-decoration: none;
+ color: $Color-Font;
+ font-size: 1.3rem;
+ font-family:'Times New Roman', Times, serif;
+ font-weight: 700;
+ 
+        }
+        .Link--1{
+            margin-right: .7rem;
+        }
+
+        .Link--2{
+            padding-left: .7rem;
+            border-left: 2px solid $Color-Border;
+        }
+    }
+}
+
+.logo{
+    height: 7rem;
+}

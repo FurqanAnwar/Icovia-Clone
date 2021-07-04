@@ -1,0 +1,7 @@
+.Input-Container{
+    margin: 1rem;
+    &__Input{
+        width: 4rem;
+        @include mx(.5rem);
+    }
+}
