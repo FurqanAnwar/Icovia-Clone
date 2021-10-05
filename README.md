@@ -16,3 +16,6 @@ yarn install
 ~~~
 yarn start
 ~~~
+
+# Want to contribute :question:
+For more information visit [CONTRIBUTION.md](https://github.com/FurqanAnwar/Icovia-Clone/blob/main/CONTRIBUTING.md)
