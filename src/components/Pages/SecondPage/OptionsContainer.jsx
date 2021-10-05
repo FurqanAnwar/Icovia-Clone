@@ -38,7 +38,7 @@ const OptionsContainer = (props) => {
                             btn_2: 'Button2'
         
                         }
-                    } length="2" type="complex-btn" /></div>)
+                    } length="2" type="complex-btn" class="Btn-Small"/></div>)
                 }
 
                 return (<Button title={names[index]} />)
