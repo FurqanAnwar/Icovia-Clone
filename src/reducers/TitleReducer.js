@@ -1,6 +1,6 @@
 
 
-const TitleReducer = (state = " ", action) =>{
+const TitleReducer = (state = "", action) =>{
     switch(action.type){
         case 'ShowTitle':
             return action.payload;
