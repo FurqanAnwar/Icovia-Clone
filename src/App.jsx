@@ -1,16 +1,26 @@
-import React from 'react'
-import Header from './components/Header/Header';
-import Main from 'src/components/Main/Main';
-import SecondPage from 'src/components/Pages/SecondPage/SecondPage';
+import React from "react";
+import Header from "./components/Header/Header";
+import Main from "src/components/Main/Main";
+import SecondPage from "src/components/Pages/SecondPage/SecondPage";
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
 const App = () => {
-    return (
-        <section className="Section">
-            <Header/>
+  return (
+    <Router>
+      <section className="Section">
+        <Header />
+        <Switch>
+          <Route exact path="/">
             <Main />
-            <SecondPage/>
+          </Route>
+          <Route exact path="/plan">
+            <SecondPage />
+          </Route>
+        </Switch>
+      </section>
+    </Router>
+  );
+};
 
-        </section>
-    )
-}
-
-export default App
+export default App;
