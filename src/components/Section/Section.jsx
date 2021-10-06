@@ -13,8 +13,7 @@ import SingleImgContainer from 'src/components/ImgContainer/SingleImgContainer';
 
 const Section = (props) => {
     const Box = props.component;
-    const Title = useSelector( state => state.Title);
-    
+    const Title = useSelector(state => state.Title);
     
   
     return (
@@ -56,7 +55,7 @@ const Section = (props) => {
                     <div className="Preview-Container">
                         {
                            
-                            props.type === 'Custom' ?  <ImgContainer/> : <SingleImgContainer Title={Title}/>
+                                props.type === 'Custom' ? <ImgContainer /> : <SingleImgContainer Title={ Title ? Title : "30x45" }/>
 
                         }
                        
