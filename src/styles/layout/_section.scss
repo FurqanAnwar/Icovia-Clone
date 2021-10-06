@@ -38,10 +38,11 @@
                 }
                 &__Content{
                     display: grid;
+                    place-items: center;
                     grid-template-rows: repeat(3,1fr);
                     grid-template-columns: repeat(3,1fr);
                     height:100%;
-                    padding: 1rem 0 0 1.5rem;
+                    padding: 1rem 1rem;
 
                     
                     &-row{
