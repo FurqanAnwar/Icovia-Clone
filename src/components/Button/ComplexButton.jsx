@@ -4,6 +4,7 @@ import Button from 'src/components/Button/Button';
 import DropDownBox from 'src/components/DropDownBox/DropDownBox';
 import {useSelector,useDispatch} from 'react-redux';
 import BtnTitle from 'src/actions/BtnTitle';
+import HeaderBtnTitle from 'src/actions/HeaderBtnTitle';
 import Dropdown from 'src/actions/Dropdown';
 
 
@@ -19,13 +20,18 @@ const [title, setTitle]        = useState('');
     const handleClick  = (event) => {
         let  value = !showBlock;
             setShowBlock(value);
-        // dispatch(Dropdown());
         let valTitle = event.target.innerText;
-        // // console.log(valTitle)
+        valTitle = valTitle ? valTitle : "";
+
+        if (props.btnIsComponentOfHeader) {
+            dispatch(HeaderBtnTitle(valTitle))
+            setTitle(valTitle);
+            return;
+        }
+       
         dispatch(BtnTitle(valTitle));
             setTitle(valTitle);
-            // getStateOfBtn(valTitle);
-    //    console.log(Title)
+           
     }
 
   

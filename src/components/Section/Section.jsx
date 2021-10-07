@@ -12,6 +12,7 @@ import { useHistory } from "react-router-dom";
 const Section = (props) => {
   const Box = props.component;
   const Title = useSelector((state) => state.Title);
+ 
   const history = useHistory();
 
   function handleRouting() {
@@ -64,7 +65,7 @@ const Section = (props) => {
               {props.type === "Custom" ? (
                 <ImgContainer />
               ) : (
-                <SingleImgContainer Title={Title ? Title : "30x45"} />
+                  <SingleImgContainer Title={Title ? Title :"30x45"} />
               )}
             </div>
           </div>

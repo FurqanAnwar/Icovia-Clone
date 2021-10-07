@@ -23,7 +23,7 @@ const DropDownBox = (props) =>{
                 
             arr.map(elem =>{
                     
-                return <Button title={props.title[`btn_${elem}`]}  class="Btn-DropDown"/>
+                return <Button key={ elem}title={props.title[`btn_${elem}`]}  class="Btn-DropDown"/>
             }) }
             </div>
         )
