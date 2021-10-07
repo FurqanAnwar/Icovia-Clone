@@ -24,7 +24,7 @@ const ImageContainer = () => {
         <div className={`Preview-Container__Content`}>
            {
                [1,2,3,4,5,6,7,8,9].map( elem =>{
-                   return <img onClick={handleImgClick} src={`src/assets/images/Pic-${elem}.png`} alt="image" className="Preview-Container__img"/>
+                   return <img key={ elem} onClick={handleImgClick} src={`src/assets/images/Pic-${elem}.png`} alt="image" className="Preview-Container__img"/>
                })
            }
     
