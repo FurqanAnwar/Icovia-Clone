@@ -9,7 +9,7 @@ const Button = (props) => {
 
   return (
     <button
-      onClick={props.handleClick}
+      onClick={props.handleClick ? props.handleClick : handleBtnClick}
       className={`Btn ${props.class ? props.class : ""} `}
     >
       <span className={`Btn__Title Btn--Block ${btnClass ? btnClass : ""} `}>
@@ -22,4 +22,8 @@ const Button = (props) => {
   );
 };
 
+const handleBtnClick = (event) => {
+  let target = event;
+  console.log("target is ", target)
+}
 export default Button;

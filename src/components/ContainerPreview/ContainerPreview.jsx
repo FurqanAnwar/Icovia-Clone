@@ -16,7 +16,7 @@ const ContainerPreview = (props) =>{
     
      Dispatch   = useDispatch();
     
-    firstChild = PreviewContianerDiv.current.childNodes;
+    // firstChild = PreviewContianerDiv.current.childNodes;
     
     const handleImgClick = (event) =>{
         
