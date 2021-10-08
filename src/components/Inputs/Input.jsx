@@ -20,7 +20,7 @@ const Input = (props) => {
                     </label>
                     <input type="text" name="input"className="Input-Container__Input"/>
                     {
-                        props.type === 'Inches'? ExtraInput: null
+                        props.Type === "Inches"? ExtraInput() : null
                     }
                     <label htmlFor="" className="Input-Container__Label">
                         {props.length}
