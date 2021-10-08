@@ -13,7 +13,7 @@ const Button = (props) => {
       className={`Btn ${props.class ? props.class : ""} `}
     >
       <span className={`Btn__Title Btn--Block ${btnClass ? btnClass : ""} `}>
-        {props.type === "complex-btn" ? props.handleTitle : props.title}
+        {props.handleTitle ? props.handleTitle : props.title}
       </span>
 
       {props.type === "complex-btn" ? <Arrow /> : null}

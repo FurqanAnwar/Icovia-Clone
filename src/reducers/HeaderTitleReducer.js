@@ -1,4 +1,4 @@
-const HeaderTitleReducer = (state = "", action) => {
+const HeaderTitleReducer = (state = "Inches", action) => {
     switch (action.type) {
         case 'ShowHeaderTitle':
             return action.payload;
