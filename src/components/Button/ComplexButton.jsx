@@ -17,11 +17,11 @@ const ComplexBtn = (props) =>{
 const [showBlock,setShowBlock] = useState(false);
 const [title, setTitle]        = useState('');
 
-    const handleClick  = (event) => {
+    const handleClick = (event) => {
+        
         let  value = !showBlock;
             setShowBlock(value);
         let valTitle = event.target.innerText;
-        valTitle = valTitle ? valTitle : "";
 
         if (props.btnIsComponentOfHeader) {
             dispatch(HeaderBtnTitle(valTitle))

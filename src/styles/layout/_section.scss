@@ -34,7 +34,6 @@
 
                 &__img{
                     flex-basis: 33.33%;
-                    // background-color: red;
                 }
                 &__Content{
                     display: grid;
@@ -43,7 +42,8 @@
                     grid-template-columns: repeat(3,1fr);
                     height:100%;
                     padding: 1rem 1rem;
-
+                    
+                    
                     
                     &-row{
                         display: flex;
@@ -74,3 +74,4 @@
 .ComplexBtn-Container{
     position: relative;
 }
+

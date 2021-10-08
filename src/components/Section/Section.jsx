@@ -36,6 +36,7 @@ const Section = (props) => {
               <div className="ComplexBtn-Container">
                 <ComplexBtn
                   length="10"
+                  title = "30x45"
                   titles={{
                     btn_1: "4x8",
                     btn_2: "9x9",
@@ -65,7 +66,7 @@ const Section = (props) => {
               {props.type === "Custom" ? (
                 <ImgContainer />
               ) : (
-                  <SingleImgContainer Title={Title ? Title :"30x45"} />
+                  <SingleImgContainer Title={Title} />
               )}
             </div>
           </div>

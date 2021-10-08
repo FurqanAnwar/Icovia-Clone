@@ -9,38 +9,33 @@ const PrintContainer = (props) =>{
     let finalArr1= [];
     
     
-    // console.log(Title);
     
     useEffect(() => {
-        if((array!=undefined||array!=null)){
-            // console.log("TITLE",Title)
+        if(array){
+          
             array.forEach(z => {
         if(z.name===Title){
-                    // console.log("check it");
+                   
                     finalArr1.push(z);
                     setfinalArr(finalArr1);
                 }
-                // console.log("00000",z.name);
+                
             });
     
 
         }
+       
     }, [Title])
 
-    // console.log("state",finalArr);
-// arr.map((z,id)=>{
-//     console.log(z.name);
-// })
-
-  
-    // console.log(arr[0]);
+   
    
     return(<>
         {finalArr.length>0?
-       finalArr.map((x)=>{
-           return(
-x.items.map(z=>{
-    return <img onClick={props.handleImgClick} src={`src/assets/images/${x.name}/${z}.svg`} alt="image" className="Preview-Container__img"/>
+            finalArr.map((x) => {
+           return (
+               x.items.map(z => {
+                 
+                   return <img onClick={props.handleImgClick} src={`src/assets/images/${x.name}/${z}.svg`} alt="image" className="Preview-Container__img"/>
 }))
       
 }): null

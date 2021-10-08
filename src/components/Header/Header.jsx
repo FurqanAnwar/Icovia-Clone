@@ -21,7 +21,7 @@ const Header = (props) => {
                         btn_2: 'Matric'
     
                     }
-                } length="2" type="complex-btn" btnIsComponentOfHeader={ true} class="Btn-Small" />
+                } title="Inches"length="2" type="complex-btn" btnIsComponentOfHeader={ true} class="Btn-Small" />
                   
                 </div>
                 
