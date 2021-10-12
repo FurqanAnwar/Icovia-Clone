@@ -179,10 +179,20 @@ linear-gradient(180deg,
         border: 1px solid rgba(0,0,0,.125);
         background-clip: border-box;
         flex-basis: 7%;
+
+        // &:first-child {
+        //     background-image: linear-gradient(45deg,
+        //     rgba(101, 171, 225, 0.6),
+        //     rgba(101, 171, 225, 0.6));
+        //     background-color: rgba(255,255,255,1) !important;
+        //     border: 0.125rem solid rgba(101, 171, 225, 1) !important;
+        //     padding: 0 !important;
+        //     outline: none !important;
+        // }
         &:not(:last-child){
             margin-right: 1rem;
         }
-
+        
         &:not(:last-child):hover{
             background-image: linear-gradient(45deg,
             rgba(101, 171, 225, 0.3),
@@ -213,9 +223,21 @@ linear-gradient(180deg,
         }
         & img{
             margin: 0 1rem;
+            pointer-events: none;
         }
         &__Btn{
             flex-basis: 30%;
+          
+        }
+
+        &__Slider{
+          
+            flex-basis: 70%;
+            justify-content: space-evenly;
+          
+        }
+
+        &__Slider,&__Btn{
             align-items: center;
             display: flex;
 
@@ -223,28 +245,14 @@ linear-gradient(180deg,
                
                 background:0;
                 border:0;
-                
+                cursor:pointer;
             }
             & > span:hover{
                 background-color: #fff;
             }
         }
-        &__Slider{
-            display: flex;
-            flex-basis: 70%;
-            justify-content: space-evenly;
-            align-items: center;
 
-            &> span{
-               
-                background: 0;
-                border:0;
-            }
 
-            & > span:hover{
-                background-color:#fff;
-            }
-        }
         &--7{
             flex-basis: 58%;
             height: 100%;
@@ -253,6 +261,7 @@ linear-gradient(180deg,
                               linear-gradient(to bottom,rgba(255,255,255,0.25) 5%,rgba(255,255,255,0.75) 95%,rgba(255,255,255,0.25) 100%);
             background-color: rgba(255, 247, 227, 0.25);
             border:1px solid rgba(0,0,0,.125);
+
         }
     }
     & > button{
@@ -281,4 +290,14 @@ linear-gradient(180deg,
             margin-left:1rem;
         }
     }
+}
+
+
+.active-tool{
+    background-image: linear-gradient(45deg,
+    rgba(101, 171, 225, 0.6),
+    rgba(101, 171, 225, 0.6));
+    background-color: rgba(255,255,255,1) !important;
+    padding: 0 !important;
+    outline: none !important;
 }
