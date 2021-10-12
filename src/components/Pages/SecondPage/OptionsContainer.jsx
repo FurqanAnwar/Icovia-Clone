@@ -52,13 +52,9 @@ const handleOptionsClick = (event) => {
     const target = event.target;
 
     const parentNode = target.parentNode;
-    console.log(parentNode)
+    
     const childsListOfParentNode = parentNode.childNodes;
     
-    if (target.classList.contains("Options-Container-Item--7")) {
-        // Do nothing and return
-        return 
-    }
     childsListOfParentNode.forEach(item => {
         if (item.classList.contains("active-tool")) {
             item.classList.remove("active-tool")
