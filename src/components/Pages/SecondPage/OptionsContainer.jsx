@@ -13,7 +13,7 @@ const OptionsContainer = (props) => {
             props.type === 'div' ? 
             newArr.map((elem,index) =>{
                 return(
-                    <div className={`Options-Container-Item Options-Container-Item--${elem}`}>
+                    <div onClick={index !== 6 ? handleOptionsClick : null} className={`Options-Container-Item Options-Container-Item--${elem} ${index === 0 ? 'active-tool' : ""}`}>
                        {
                      index < 6 ? <img src={`src/assets/images/${tools[index]}.svg`} alt="Image"/> : <>
                      <div className="Options-Container-Item__Slider">
@@ -48,4 +48,23 @@ const OptionsContainer = (props) => {
     )
 }
 
+const handleOptionsClick = (event) => {
+    const target = event.target;
+
+    const parentNode = target.parentNode;
+    console.log(parentNode)
+    const childsListOfParentNode = parentNode.childNodes;
+    
+    if (target.classList.contains("Options-Container-Item--7")) {
+        // Do nothing and return
+        return 
+    }
+    childsListOfParentNode.forEach(item => {
+        if (item.classList.contains("active-tool")) {
+            item.classList.remove("active-tool")
+        }
+    })
+
+    target.classList.add("active-tool");
+}
 export default OptionsContainer

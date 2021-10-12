@@ -32,10 +32,11 @@ const PrintContainer = (props) =>{
     return(<>
         {finalArr.length>0?
             finalArr.map((x) => {
+                
            return (
-               x.items.map(z => {
+               x.items.map((element,index) => {
                  
-                   return <img onClick={props.handleImgClick} src={`src/assets/images/${x.name}/${z}.svg`} alt="image" className="Preview-Container__img"/>
+                   return <img onClick={props.handleImgClick} src={`src/assets/images/${x.name}/${element}.svg`} alt="image" className={`Preview-Container__img ${index === 0 ? 'img-selected': ''}`}/>
 }))
       
 }): null
