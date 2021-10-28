@@ -6,6 +6,7 @@ import ComplexBtn from "src/components/Button/ComplexButton";
 import { useSelector } from "react-redux";
 import ImgContainer from "src/components/ImgContainer/ImageContainer";
 import SingleImgContainer from "src/components/ImgContainer/SingleImgContainer";
+import ComplexBtnContainer from 'src/components/Button/ComplexButtonContainer';
 
 import { useHistory } from "react-router-dom";
 
@@ -33,8 +34,21 @@ const Section = (props) => {
             {props.type === "Custom" ? (
               <Box />
             ) : (
-              <div className="ComplexBtn-Container">
-                <ComplexBtn
+                <div className="ComplexBtn-Container">
+                  <ComplexBtnContainer titles={
+                            {
+                              btn_1: "4x8",
+                              btn_2: "9x9",
+                              btn_3: "12x12",
+                              btn_4: "15x25",
+                              btn_5: "18x36",
+                              btn_6: "30x45",
+                              btn_7: "40x60",
+                              btn_8: "40x80",
+                              btn_9: "40x100",
+                              btn_10: "50x100",
+                            }} length="10" title="30x45"  class="Btn-Stretch" />
+                {/* <ComplexBtn
                   length="10"
                   title = "30x45"
                   titles={{
@@ -50,7 +64,7 @@ const Section = (props) => {
                     btn_10: "50x100",
                   }}
                   class="Btn-Stretch"
-                />
+                /> */}
               </div>
             )}
 

@@ -1,6 +1,7 @@
-const Dropdown = () =>{
+const Dropdown = (value) =>{
     return {
-        type: "ShowDropDown"
+        type: "ShowDropDown",
+        payload: value
     }
 }
 export default Dropdown

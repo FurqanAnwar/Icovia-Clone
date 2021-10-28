@@ -1,11 +1,20 @@
 .Btn{
     width: 8rem;
-    height: 2.5rem;
+    height: 2.2rem;
     border-radius: .8rem;
     display: flex;
     border:0.0625rem solid $Color-Border;
     overflow: hidden;
-    
+    font-size: 1.1rem;
+        outline: none !important;
+        
+       
+ 
+        font-weight: bold !important;
+        background-image: -webkit-gradient(linear, left bottom, left top, from(#e5e5e5), to(#ffffff));
+        background-image: -o-linear-gradient(bottom, #e5e5e5, #ffffff);
+        /* background-image: linear-gradient(to top, #e5e5e5, #ffffff); */
+   
     & span{
         font-size: 1.2rem;
     }
@@ -68,9 +77,9 @@
         position: absolute;
         top: 100%;
         left: 0;
-        height: 10rem;
-        width: 20rem;
-        overflow-y: scroll;
+        height: auto;
+        width: 100%;
+        overflow-y: auto;
         background-color: #fff;
         visibility:hidden ;
         opacity: 0;
@@ -106,9 +115,9 @@
          & > .Btn-Collection{
              top:110%;
              left:.1%;
-             width: 8.5rem;
-             height: 6rem;
-             overflow-y: unset;
+             width: 100%;
+            
+             overflow-y: auto;
          }
      }
     &-Visible{

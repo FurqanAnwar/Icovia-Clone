@@ -9,7 +9,7 @@ const Button = (props) => {
 
   return (
     <button
-      onClick={props.handleClick ? props.handleClick : handleBtnClick}
+      onClick={props.handleClick ? props.handleClick : null}
       className={`Btn ${props.class ? props.class : ""} `}
     >
       <span className={`Btn__Title Btn--Block ${btnClass ? btnClass : ""} `}>

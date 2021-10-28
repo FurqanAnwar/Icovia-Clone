@@ -1,7 +1,7 @@
 const DropdownReducer = (state = false, action) =>{
     switch(action.type){
         case "ShowDropDown":
-            return !state;
+            return action.payload;
         default: 
         return state;
     }

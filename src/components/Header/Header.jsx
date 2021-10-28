@@ -3,6 +3,8 @@ import Button from '../Button/Button';
 import ComplexBtn from 'src/components/Button/ComplexButton';
 import Logo from 'src/assets/svgs/logo.svg';
 import Links from 'src/components/Links/Links'
+import ComplexBtnContainer from 'src/components/Button/ComplexButtonContainer';
+
 const Header = (props) => {
     return (
         <header className="Header">
@@ -14,14 +16,20 @@ const Header = (props) => {
             </div>
             
             <div className={`Header__Container__Tab ${props.classHeaderTab ?props.classHeaderTab : ''}`}>
-            <div className="Content__Btn-Container">
-                <ComplexBtn titles={
+                    <div className="Content__Btn-Container">
+                    <ComplexBtnContainer titles={
+                            {
+                                btn_1: 'Inches',
+                                btn_2: 'Metric'
+            
+                            }} length="2" title="Inches" type="complex-btn" class="Btn-Small" belongsTo="Header"/>
+                {/* <ComplexBtn titles={
                     {
                         btn_1: 'Inches',
                         btn_2: 'Matric'
     
                     }
-                } title="Inches"length="2" type="complex-btn" btnIsComponentOfHeader={ true} class="Btn-Small" />
+                } title="Inches"length="2" type="complex-btn" btnIsComponentOfHeader={ true} class="Btn-Small" /> */}
                   
                 </div>
                 

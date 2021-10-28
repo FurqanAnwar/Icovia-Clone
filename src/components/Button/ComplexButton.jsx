@@ -1,45 +1,64 @@
 
 import React,{useState,useRef} from 'react';
 import Button from 'src/components/Button/Button';
-import DropDownBox from 'src/components/DropDownBox/DropDownBox';
+
 import {useSelector,useDispatch} from 'react-redux';
 import BtnTitle from 'src/actions/BtnTitle';
 import HeaderBtnTitle from 'src/actions/HeaderBtnTitle';
-import Dropdown from 'src/actions/Dropdown';
+import ShowDropDown from 'src/actions/Dropdown';
+
+import OptionsContainerBtn from 'src/actions/OptionsContainerBtn';
 
 
 const ComplexBtn = (props) =>{
-  
-    const Title = useSelector( state => state.Title);
-    // const ShowDropDown = useSelector( state => state.Dropdown);
+    // console.log(props);
+    const depend = props.belongsTo ? props.belongsTo : null;
+    const Title = useSelector(state => state.Title);
+    const OptionsContainerBtnTitle = useSelector(state => state.OptionsContainerBtn);
+   
+    const DropDown = useSelector( state => state.Dropdown);
     const dispatch = useDispatch();
 
 const [showBlock,setShowBlock] = useState(false);
-const [title, setTitle]        = useState('');
+const [title, setTitle]        = useState(null);
 
     const handleClick = (event) => {
         
-        let  value = !showBlock;
-            setShowBlock(value);
-        let valTitle = event.target.innerText;
+        
+        setShowBlock(() => !DropDown);
 
-        if (props.btnIsComponentOfHeader) {
+        dispatch(ShowDropDown(!DropDown))
+     
+        let valTitle = event.target.innerText;
+        
+
+        // handling the click event for header btn
+        // Add another check for matching the text
+        if (props.belongsTo  && props.belongsTo === 'Header' && valTitle) {
             dispatch(HeaderBtnTitle(valTitle))
-            setTitle(valTitle);
-            return;
+            
         }
-       
-        dispatch(BtnTitle(valTitle));
-            setTitle(valTitle);
+        if (props.belongsTo && props.belongsTo === 'OptionsContainer' && valTitle) {
+            
+            dispatch(OptionsContainerBtn(valTitle));
+
+        }
+        // Handling click event for button other than header btn
+    //     if (valTitle) {
            
+    //         dispatch(BtnTitle(valTitle));
+    //             // setTitle(valTitle);
+    //    }
+        setTitle(valTitle);
     }
 
   
   
        
         return (
-            <Button  handleClick={handleClick} handleTitle={title} title={props.title}type="complex-btn" class={props.class}>
-                <DropDownBox class={props.btnCol } length={props.length}state={showBlock} title={props.titles}/>
+            <Button  handleClick={handleClick} handleTitle={props.handleTitle? props.handleTitle : title} title={props.title} type="complex-btn" class={props.class}>
+             
+                {/* <DropDownBox class={props.btnCol } length={props.length}state={showBlock} title={props.titles}/> */}
             </Button>
        )
     

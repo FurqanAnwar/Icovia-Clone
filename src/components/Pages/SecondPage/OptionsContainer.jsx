@@ -1,10 +1,11 @@
 import React from 'react'
 import Button from 'src/components/Button/Button';
 import ComplexBtn from 'src/components/Button/ComplexButton';
+import ComplexBtnContainer from 'src/components/Button/ComplexButtonContainer';
 import Slider from 'src/components/Pages/SecondPage/Slider';
 const OptionsContainer = (props) => {
     let arr = [1,2,3,4,5];
-    let newArr = [1,2,3,4,5,6,7];
+    let newArr = [...arr,6,7];
     let names = ['New','Save','Print','Share','Undo']
     let tools = ['selectTool','dragTool','wallTool','textTool','dimensionTool','zoomInTool']
     return (
@@ -31,14 +32,16 @@ const OptionsContainer = (props) => {
                 )
             }) :
             arr.map((elem,index) =>{
-                if(elem == 2){
-                    return(<div className="Content__Btn-Container"><ComplexBtn titles={
-                        {
-                            btn_1: 'Button1',
-                            btn_2: 'Button2'
-        
-                        }
-                    } length="2" type="complex-btn" class="Btn-Small"/></div>)
+                if (elem == 2) {
+                    return (
+                        <ComplexBtnContainer titles={
+                            {
+                                btn_1: 'Save',
+                                btn_2: 'Save as',
+                                btn_3: 'Export'
+            
+                            }} length="3" title="Save" type="complex-btn" class="Btn-Small" belongsTo="OptionsContainer"/>
+                        )
                 }
 
                 return (<Button title={names[index]} />)
@@ -54,7 +57,7 @@ const handleOptionsClick = (event) => {
     const parentNode = target.parentNode;
     
     const childsListOfParentNode = parentNode.childNodes;
-    
+    console.log(childsListOfParentNode)
     childsListOfParentNode.forEach(item => {
         if (item.classList.contains("active-tool")) {
             item.classList.remove("active-tool")
