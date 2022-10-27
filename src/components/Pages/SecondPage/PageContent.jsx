@@ -4,7 +4,7 @@ import ContainerPreview from 'src/components/ContainerPreview/ContainerPreview';
 import BtnArr  from 'src/assets/js/ComplexBtn.js';
 
 const PageContent = () => {
-    // console.log(BtnArr)
+    
     return (
         <div className="Content-Bottom">
             <PageBtn/>

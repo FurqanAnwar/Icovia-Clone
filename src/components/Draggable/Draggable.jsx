@@ -22,23 +22,22 @@ class Draggable extends Component {
 
         componentWillUnmount(e){
             document.removeEventListener('mousemove', (event) =>{
-                console.log('Mouse move is removed ')
+                // console.log('Mouse move is removed ')
             })
         }
     start = (event) =>{
 
         const target = event.target;
         // target.classList.add('dragging')
-        console.log(event)
+ 
     // let [X,Y] = [event.offsetX, event.offsetY];
     let X,Y = 0;
     X = event.nativeEvent.offsetX;
     Y = event.nativeEvent.offsetY;
-    console.log(X,Y)
+    
     let resultX = X + target.offsetLeft;
     let resultY = Y + target.offsetTop;
-    console.log(resultX,resultY)
-    console.log(this.state)
+   
    this.setState({
        offSetX: resultX,
        offSetY: resultY,

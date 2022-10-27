@@ -4,13 +4,6 @@ import Button from 'src/components/Button/Button'
 
 const DropDownBox = (props) =>{
    
-    // let newArr = [];
-    // let length = props.length;
-    // for(i=0; i< length; i++){
-    //     newArr.push(i);
-    // }
-    // console.log(newArr)
-    // console.log(props.length)
     let arr= [1,2,3,4];
     if(props.length == 2) arr=[1,2];
     if(props.length == 1) arr=[1];
@@ -23,7 +16,7 @@ const DropDownBox = (props) =>{
                 
             arr.map(elem =>{
                     
-                return <Button key={ elem}title={props.title[`btn_${elem}`]}  class="Btn-DropDown"/>
+                return <Button handleClick={props.handleClick} key={ elem}title={props.title[`btn_${elem}`]}  class="Btn-DropDown"/>
             }) }
             </div>
         )

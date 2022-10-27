@@ -49,7 +49,7 @@ const Section = (props) => {
                     btn_9: "40x100",
                     btn_10: "50x100",
                   }}
-                  class="Btn-Stretch"
+                  class="Btn-Stretch Btn-Dimensions"
                 />
               </div>
             )}

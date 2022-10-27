@@ -9,7 +9,7 @@ const Header = (props) => {
             <div className={`Header__Container ${props.classHeaderContainer ? props.classHeaderContainer : ''}`}>
 
             <div className={`Header__Container__Logo ${props.classHeaderLogo ? props.classHeaderLogo : ''}`}>
-                { props.title ? <h1>{props.title}</h1> : <img alt="logo" class="logo"src={Logo} />}
+                { props.title ? <h1>{props.title}</h1> : <img alt="logo" className="logo"src={Logo} />}
                 
             </div>
             
@@ -21,7 +21,7 @@ const Header = (props) => {
                         btn_2: 'Matric'
     
                     }
-                } title="Inches"length="2" type="complex-btn" btnIsComponentOfHeader={ true} class="Btn-Small" />
+                } title="Inches"length="2" type="complex-btn" btnIsComponentOfHeader={ true} btnCol="Btn-Collection--Small Btn-Collection--Pos Btn-Collection--Overflow" class="Btn-Small" />
                   
                 </div>
                 

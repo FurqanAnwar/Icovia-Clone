@@ -8,7 +8,7 @@ const DropDown = () => {
         <div className="DropDown">
             <ul className="DropDown__List">{
 
-                arr.map( elem =>{
+                arr.forEach( elem =>{
                     return (<li className="DropDown__List-Item">
                         <a href="#">
                             <span>

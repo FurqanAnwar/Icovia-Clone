@@ -4,7 +4,7 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "public"),
     filename: "bundle.js",
   },
   module: {
@@ -14,10 +14,8 @@ module.exports = {
         use: "babel-loader",
       },
       {
-        test: /\.(png|PNG|jpg|gif|svg)/,
-        use: {
-          loader: "url-loader",
-        },
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: "url-loader"
       },
       {
         test: /\.scss$/,
