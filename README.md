@@ -1,5 +1,7 @@
 # Icovia-Clone
 It is a clone of ICOVIA 20 20 Space Planner developed using REACT JS and Redux for state management. It uses KonvaJS a canvas library for the purpose of designing the view on canvas.
+# Live Preview 
+[LINK TO LIVE PREVIEW](http://icovia-clone-furqananwar.vercel.app/)
 
 # Getting Started
 1. Clone the project
