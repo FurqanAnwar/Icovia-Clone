@@ -17,6 +17,7 @@ const Diagram = (props) => {
 
    
     return (
+      // <canvas id="canvas"></canvas>
        <Stage width={props.width} height={props.height}>
          <Layer>
          {/* <Rect width={50} height={50} fill="red" /> */}

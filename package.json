@@ -6,11 +6,12 @@
   "author": "Furqan Anwar",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve --mode development --open --hot",
-    "build": "webpack --mode production"
+    "start": "webpack serve --mode development --port 5000 --open --hot",
+    "build": "webpack --mode production "
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
+    "file-loader": "^6.2.0",
     "gojs": "^2.1.36",
     "gojs-react": "^1.0.10",
     "konva": "^7.2.5",
@@ -30,7 +31,7 @@
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.2",
     "html-webpack-plugin": "^5.0.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.1",
     "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",

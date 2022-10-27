@@ -3,8 +3,6 @@ import React from 'react'
 const ImageContainer = () => {
     let parentNode,targetNode,childs;
     const handleImgClick = (event) =>{
-        console.log('image is clicked')
-        console.log(event.target.parentNode)
         parentNode = event.target.parentNode;
         targetNode = event.target;
        

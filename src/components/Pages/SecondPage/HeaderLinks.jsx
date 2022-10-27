@@ -9,11 +9,11 @@ const HeaderLinks = () => {
     return (
         <>
             {
-                arr.map((elem) =>{
-                  return <a href="#" class="Link"><span onClick={
+                arr.map((elem,index) =>{
+                  return <a href="#" key={`${index}`} className="Link"><span onClick={
                     (event) =>{
                        target = event.target;
-                       console.log(target);
+                      
                       
                       value = !clicked;
                         setClicked(value);

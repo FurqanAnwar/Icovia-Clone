@@ -41,7 +41,19 @@ const ContainerPreview = (props) =>{
       targetNode.classList.add('img-selected');
       Dispatch(HandleImg(src));
       Dispatch(AddImage(true))
-      
+     
+    // let canvas = document.getElementById("canvas")
+    // let context = canvas.getContext("2d");
+
+ 	// 	console.log("================================")
+    // let image = new Image();
+  
+    // image.src = event.target.src;
+    // image.width = "50px";
+    // image.height = "50px";
+    // context.drawImage(image,Math.ceil((Math.random() * 100) + 10), Math.floor((Math.random() * 100) + 10))
+   	// console.log("=================================")
+
     }
    
     return(

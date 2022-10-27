@@ -1,7 +1,7 @@
 import React,{useState,useRef,useEffect} from 'react'
 import {Image} from 'react-konva';
 const DiagramImage = ({src}) => {
-    console.log(src)
+    // console.log(src)
     const [selectedImage, setSelectedImage] = useState(null);
     const [xAxis,setXAxis]    = useState(0);
     const [yAxis,setYAxis]    = useState(0);
@@ -16,14 +16,13 @@ const DiagramImage = ({src}) => {
         image.src = src;
         image.crossOrigin = "Anonymous";
         imageRef.current = image;
-        console.log(image);
-        console.log(imageRef)
+    
         imageRef.current.addEventListener("load", handleLoad);
-        console.log(selectedImage)
+   
     }
     const handleLoad = () =>{
         setSelectedImage(imageRef.current)
-        console.log(selectedImage)
+       
     }
     // const getImage= (e) =>{
     //     loadImage(e.target.path)

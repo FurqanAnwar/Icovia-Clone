@@ -64,11 +64,16 @@
         border:0;
         background-color:#fff;
     }
+    &-Dimensions{
+        & + .Btn-Collection{
+            height: 10rem !important;
+        }
+    }
     &-Collection{
         position: absolute;
         top: 100%;
         left: 0;
-        height: 10rem;
+        // height: 10rem;
         width: 20rem;
         overflow-y: scroll;
         background-color: #fff;
@@ -86,7 +91,7 @@
             }
         }
         &--Small{
-            width: 15rem;
+            width: 90%;
             top: 100%;
             
         }
@@ -101,13 +106,16 @@
      }
     
     &-Small{
-       
+        
+        & + .Btn-Collection--Pos{
+            left: 5%;
+        }
         //  overflow: unset;
          & > .Btn-Collection{
              top:110%;
              left:.1%;
              width: 8.5rem;
-             height: 6rem;
+            //  height: 6rem;
              overflow-y: unset;
          }
      }

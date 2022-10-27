@@ -18,29 +18,32 @@ const [showBlock,setShowBlock] = useState(false);
 const [title, setTitle]        = useState('');
 
     const handleClick = (event) => {
-        
-        let  value = !showBlock;
-            setShowBlock(value);
+       
         let valTitle = event.target.innerText;
+        let  value = !showBlock;
+        setShowBlock(value);
+        
+        if(!valTitle){
+            valTitle = ''
+        }
 
         if (props.btnIsComponentOfHeader) {
             dispatch(HeaderBtnTitle(valTitle))
             setTitle(valTitle);
             return;
         }
-       
+        
+        setTitle(valTitle);
         dispatch(BtnTitle(valTitle));
-            setTitle(valTitle);
            
     }
 
-  
-  
-       
         return (
-            <Button  handleClick={handleClick} handleTitle={title} title={props.title}type="complex-btn" class={props.class}>
-                <DropDownBox class={props.btnCol } length={props.length}state={showBlock} title={props.titles}/>
+            <div className="complex_button_container">
+            <Button  handleClick={handleClick} handleTitle={title} title={props.title} type="complex-btn" class={props.class}>
             </Button>
+            <DropDownBox handleClick={handleClick} class={props.btnCol } length={props.length}state={showBlock} title={props.titles}/>
+            </div>
        )
     
 }

@@ -7,7 +7,7 @@ const ToolsContainer = (props) => {
         <div className="ToolsContainer">
             {
                 arr.map((elem, index) => {
-                    console.log(index)
+                    
                     // elem === 3 || 7 ? <div className="ToolsContainer__Item">
                     //     <div className="ToolsContainer__Item-Img">Image</div>
                     //     <div className="ToolsContainer__Item-Pointer">Pointer</div>

@@ -17,13 +17,12 @@ const Button = (props) => {
       </span>
 
       {props.type === "complex-btn" ? <Arrow /> : null}
-      {props.children && props.children}
+      {/* {props.children && props.children} */}
     </button>
   );
 };
 
 const handleBtnClick = (event) => {
   let target = event;
-  console.log("target is ", target)
 }
 export default Button;
